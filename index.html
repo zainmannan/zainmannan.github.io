@@ -2,142 +2,308 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zain Mannan's Resume</title>
-    <link href="styles.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <title>Test JSON page</title>
+  <link rel="stylesheet" type="text/css" href="./lab_styles.css">
 </head>
 
 <body>
-    <div class="s1">
-        <nav>
-            <div class="logo">
-                <h2>
-                    ZM
-                </h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-        <div>
-            <h1>
-                Zain Mannan
-            </h1>
-        </div>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">Test JSON page</div>
+      <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
+      <button class="button" onclick="replaceList(mixArray(countries))">Click me to replace list entries</button>
+      <div class="content" id="clear">
+        <ul class="instructions">
+          <li>Delete and re-clone the class repository</li>
+          <li>Open <span class="code">lab_5_json.html</span> in your browser</li>
+          <li>Open your developer tools and look at the logged data</li>
+          <li>In your console, write code to:
+            <ol>
+              <li>At the click of the button above</li>
+              <li>Loop through the 'countries' variable</li>
+              <li>Replace this list's entries with country names</li>
+              <li>Now, limit the number of countries listed to fifty</li>
+              <li>Randomize which fifty countries are displayed on load</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <div class="footer"></div>
     </div>
-    <!-- BEGIN CODING INFORMATION ABOUT ME -->
-    <div class="centerdiv">
-        <div class="s2">
-            <a name="about"></a>
-            <h1>ABOUT ME</h1>
-            <div>
-                <div id="imgEdit">
-                    <center>
-                        <img src=http://www.pngmart.com/files/2/Zayn-Malik-Transparent-PNG.png> <p>
-                        I am currently studying at the Robert H. Smith School of Business at the University of Maryland,
-                        College Park. My passions include web development and design, data science, and data analytics.
-                        I have worked extensively with Tableau, Python, Java, and SQL over the course of my academic
-                        career.
-                        <br>
-                        I have also begun to use and familiarize myself with HTML and CSS (which is what this website is
-                        built on!). Internships, such as one at Ciena, have equipped me with a strong understanding of
-                        PSA
-                        and Salesforce. I wish to pursue a career in data science and am currently searching for an
-                        internship in that field.
-                        </p>
-                    </center>
-                </div>
-            </div>
-        </div>
-        <!-- EXPERIENCE PAGE -->
-        <div class="s3">
-            <a name="experience"></a>
-            <h1>EXPERIENCE</h1>
-            <div id="listy" class="divBorder">
-                <ol>
-                    <center>
-                        <p>2019</p>
-                    </center>
-                    <li>
-                        Project Management Tool Educator at Ciena
-                        <ul>
-                            <li>Description: I helped transition Ciena and it's employees from Salesforce Classic to
-                                Salesforce Lightning
-                                via the implementation of WalkMe</li>
-                            <li>Responsibility:
-                                <ul>
-                                    <li>Create and maintain comprehensive project documentation</li>
-                                    <li>Analyze user data to determine the best practices when implementing educational
-                                        guides on
-                                        company-wide websites</li>
-                                    <li>Assist in the definition of project scope and objectives, involving all relevant
-                                        stakeholders
-                                        and ensuring technical feasibility</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <br>
-                    <center>
-                        <p>2018</p>
-                    </center>
-                    <li>
-                        Business Development Intern at Vheda Health
-                        <ul>
-                            <li>Description: As a member of Vheda Health’s Client Success team, I worked alongside
-                                the Chief Growth Officer to define the company’s sales strategy and support key efforts
-                                that drive bottom line growth for the company</li>
-                            <li>Responsibilities:
-                                <ul>
-                                    <li>Perform research on and make outbound calls to prospective clients</li>
-                                    <li>Perform and participate in sales opportunities</li>
-                                    <li>Assist in developing marketing materials</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <br>
-                    <center>
-                        <p>2017</p>
-                    </center>
-                    <li>
-                        Youth Counselor at Camp Taqwa (2017)
-                        <ul>
-                            <li>Description: I was in charge of planning, leading, and implementing experiences for
-                                children
-                                that they
-                                can learn and have fun in</li>
-                            <li>Responsibilities:
-                                <ul>
-                                    <li>Instruct and organize camper projects</li>
-                                    <li>Set up and ensure recreation equipment is secure and stored properly</li>
-                                    <li>Ensure camper safety and monitor their activities</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <div class="s4">
-            <a name="contact"></a>
-            <h1>CONTACT ME</h1>
-            <div class="centerIcons">
-                <a href="https://www.linkedin.com/in/zain-mannan-86a07572/" class="button" target="_blank"><i
-                        class="fab fa-linkedin"></i></button></a>
-                <a href="https://github.com/zainmannan/" class="button" target="_blank"><i
-                        class="fab fa-github"></i></button></a>
-                <a href="https://twitter.com/make_it_Zain" class="button" target="_blank"><i
-                        class="fab fa-twitter"></i></button></a>
-                <a href="mailto:zainmannan1199@gmail.com" class="button" target="_blank"><i
-                        class="far fa-envelope"></i></button></a>
-            </div>
-        </div>
-    </div>
+  </div>
+  <script>
+    /* N.B. - For your lab, use the variable "countries" now available on the window space */
+    const countries = [
+      { "name": "Afghanistan", "code": "AF" },
+      { "name": "Åland Islands", "code": "AX" },
+      { "name": "Albania", "code": "AL" },
+      { "name": "Algeria", "code": "DZ" },
+      { "name": "American Samoa", "code": "AS" },
+      { "name": "Andorra", "code": "AD" },
+      { "name": "Angola", "code": "AO" },
+      { "name": "Anguilla", "code": "AI" },
+      { "name": "Antarctica", "code": "AQ" },
+      { "name": "Antigua and Barbuda", "code": "AG" },
+      { "name": "Argentina", "code": "AR" },
+      { "name": "Armenia", "code": "AM" },
+      { "name": "Aruba", "code": "AW" },
+      { "name": "Australia", "code": "AU" },
+      { "name": "Austria", "code": "AT" },
+      { "name": "Azerbaijan", "code": "AZ" },
+      { "name": "Bahamas", "code": "BS" },
+      { "name": "Bahrain", "code": "BH" },
+      { "name": "Bangladesh", "code": "BD" },
+      { "name": "Barbados", "code": "BB" },
+      { "name": "Belarus", "code": "BY" },
+      { "name": "Belgium", "code": "BE" },
+      { "name": "Belize", "code": "BZ" },
+      { "name": "Benin", "code": "BJ" },
+      { "name": "Bermuda", "code": "BM" },
+      { "name": "Bhutan", "code": "BT" },
+      { "name": "Bolivia", "code": "BO" },
+      { "name": "Bosnia and Herzegovina", "code": "BA" },
+      { "name": "Botswana", "code": "BW" },
+      { "name": "Bouvet Island", "code": "BV" },
+      { "name": "Brazil", "code": "BR" },
+      { "name": "British Indian Ocean Territory", "code": "IO" },
+      { "name": "Brunei Darussalam", "code": "BN" },
+      { "name": "Bulgaria", "code": "BG" },
+      { "name": "Burkina Faso", "code": "BF" },
+      { "name": "Burundi", "code": "BI" },
+      { "name": "Cambodia", "code": "KH" },
+      { "name": "Cameroon", "code": "CM" },
+      { "name": "Canada", "code": "CA" },
+      { "name": "Cape Verde", "code": "CV" },
+      { "name": "Cayman Islands", "code": "KY" },
+      { "name": "Central African Republic", "code": "CF" },
+      { "name": "Chad", "code": "TD" },
+      { "name": "Chile", "code": "CL" },
+      { "name": "China", "code": "CN" },
+      { "name": "Christmas Island", "code": "CX" },
+      { "name": "Cocos (Keeling) Islands", "code": "CC" },
+      { "name": "Colombia", "code": "CO" },
+      { "name": "Comoros", "code": "KM" },
+      { "name": "Congo", "code": "CG" },
+      { "name": "Congo, The Democratic Republic of the", "code": "CD" },
+      { "name": "Cook Islands", "code": "CK" },
+      { "name": "Costa Rica", "code": "CR" },
+      { "name": "Cote D`Ivoire", "code": "CI" },
+      { "name": "Croatia", "code": "HR" },
+      { "name": "Cuba", "code": "CU" },
+      { "name": "Cyprus", "code": "CY" },
+      { "name": "Czech Republic", "code": "CZ" },
+      { "name": "Denmark", "code": "DK" },
+      { "name": "Djibouti", "code": "DJ" },
+      { "name": "Dominica", "code": "DM" },
+      { "name": "Dominican Republic", "code": "DO" },
+      { "name": "Ecuador", "code": "EC" },
+      { "name": "Egypt", "code": "EG" },
+      { "name": "El Salvador", "code": "SV" },
+      { "name": "Equatorial Guinea", "code": "GQ" },
+      { "name": "Eritrea", "code": "ER" },
+      { "name": "Estonia", "code": "EE" },
+      { "name": "Ethiopia", "code": "ET" },
+      { "name": "Falkland Islands (Malvinas)", "code": "FK" },
+      { "name": "Faroe Islands", "code": "FO" },
+      { "name": "Fiji", "code": "FJ" },
+      { "name": "Finland", "code": "FI" },
+      { "name": "France", "code": "FR" },
+      { "name": "French Guiana", "code": "GF" },
+      { "name": "French Polynesia", "code": "PF" },
+      { "name": "French Southern Territories", "code": "TF" },
+      { "name": "Gabon", "code": "GA" },
+      { "name": "Gambia", "code": "GM" },
+      { "name": "Georgia", "code": "GE" },
+      { "name": "Germany", "code": "DE" },
+      { "name": "Ghana", "code": "GH" },
+      { "name": "Gibraltar", "code": "GI" },
+      { "name": "Greece", "code": "GR" },
+      { "name": "Greenland", "code": "GL" },
+      { "name": "Grenada", "code": "GD" },
+      { "name": "Guadeloupe", "code": "GP" },
+      { "name": "Guam", "code": "GU" },
+      { "name": "Guatemala", "code": "GT" },
+      { "name": "Guernsey", "code": "GG" },
+      { "name": "Guinea", "code": "GN" },
+      { "name": "Guinea-Bissau", "code": "GW" },
+      { "name": "Guyana", "code": "GY" },
+      { "name": "Haiti", "code": "HT" },
+      { "name": "Heard Island and Mcdonald Islands", "code": "HM" },
+      { "name": "Holy See (Vatican City State)", "code": "VA" },
+      { "name": "Honduras", "code": "HN" },
+      { "name": "Hong Kong", "code": "HK" },
+      { "name": "Hungary", "code": "HU" },
+      { "name": "Iceland", "code": "IS" },
+      { "name": "India", "code": "IN" },
+      { "name": "Indonesia", "code": "ID" },
+      { "name": "Iran, Islamic Republic Of", "code": "IR" },
+      { "name": "Iraq", "code": "IQ" },
+      { "name": "Ireland", "code": "IE" },
+      { "name": "Isle of Man", "code": "IM" },
+      { "name": "Israel", "code": "IL" },
+      { "name": "Italy", "code": "IT" },
+      { "name": "Jamaica", "code": "JM" },
+      { "name": "Japan", "code": "JP" },
+      { "name": "Jersey", "code": "JE" },
+      { "name": "Jordan", "code": "JO" },
+      { "name": "Kazakhstan", "code": "KZ" },
+      { "name": "Kenya", "code": "KE" },
+      { "name": "Kiribati", "code": "KI" },
+      { "name": "Korea, Democratic People'S Republic of", "code": "KP" },
+      { "name": "Korea, Republic of", "code": "KR" },
+      { "name": "Kuwait", "code": "KW" },
+      { "name": "Kyrgyzstan", "code": "KG" },
+      { "name": "Lao People'S Democratic Republic", "code": "LA" },
+      { "name": "Latvia", "code": "LV" },
+      { "name": "Lebanon", "code": "LB" },
+      { "name": "Lesotho", "code": "LS" },
+      { "name": "Liberia", "code": "LR" },
+      { "name": "Libyan Arab Jamahiriya", "code": "LY" },
+      { "name": "Liechtenstein", "code": "LI" },
+      { "name": "Lithuania", "code": "LT" },
+      { "name": "Luxembourg", "code": "LU" },
+      { "name": "Macao", "code": "MO" },
+      { "name": "Macedonia, The Former Yugoslav Republic of", "code": "MK" },
+      { "name": "Madagascar", "code": "MG" },
+      { "name": "Malawi", "code": "MW" },
+      { "name": "Malaysia", "code": "MY" },
+      { "name": "Maldives", "code": "MV" },
+      { "name": "Mali", "code": "ML" },
+      { "name": "Malta", "code": "MT" },
+      { "name": "Marshall Islands", "code": "MH" },
+      { "name": "Martinique", "code": "MQ" },
+      { "name": "Mauritania", "code": "MR" },
+      { "name": "Mauritius", "code": "MU" },
+      { "name": "Mayotte", "code": "YT" },
+      { "name": "Mexico", "code": "MX" },
+      { "name": "Micronesia, Federated States of", "code": "FM" },
+      { "name": "Moldova, Republic of", "code": "MD" },
+      { "name": "Monaco", "code": "MC" },
+      { "name": "Mongolia", "code": "MN" },
+      { "name": "Montserrat", "code": "MS" },
+      { "name": "Morocco", "code": "MA" },
+      { "name": "Mozambique", "code": "MZ" },
+      { "name": "Myanmar", "code": "MM" },
+      { "name": "Namibia", "code": "NA" },
+      { "name": "Nauru", "code": "NR" },
+      { "name": "Nepal", "code": "NP" },
+      { "name": "Netherlands", "code": "NL" },
+      { "name": "Netherlands Antilles", "code": "AN" },
+      { "name": "New Caledonia", "code": "NC" },
+      { "name": "New Zealand", "code": "NZ" },
+      { "name": "Nicaragua", "code": "NI" },
+      { "name": "Niger", "code": "NE" },
+      { "name": "Nigeria", "code": "NG" },
+      { "name": "Niue", "code": "NU" },
+      { "name": "Norfolk Island", "code": "NF" },
+      { "name": "Northern Mariana Islands", "code": "MP" },
+      { "name": "Norway", "code": "NO" },
+      { "name": "Oman", "code": "OM" },
+      { "name": "Pakistan", "code": "PK" },
+      { "name": "Palau", "code": "PW" },
+      { "name": "Palestinian Territory, Occupied", "code": "PS" },
+      { "name": "Panama", "code": "PA" },
+      { "name": "Papua New Guinea", "code": "PG" },
+      { "name": "Paraguay", "code": "PY" },
+      { "name": "Peru", "code": "PE" },
+      { "name": "Philippines", "code": "PH" },
+      { "name": "Pitcairn", "code": "PN" },
+      { "name": "Poland", "code": "PL" },
+      { "name": "Portugal", "code": "PT" },
+      { "name": "Puerto Rico", "code": "PR" },
+      { "name": "Qatar", "code": "QA" },
+      { "name": "Reunion", "code": "RE" },
+      { "name": "Romania", "code": "RO" },
+      { "name": "Russian Federation", "code": "RU" },
+      { "name": "RWANDA", "code": "RW" },
+      { "name": "Saint Helena", "code": "SH" },
+      { "name": "Saint Kitts and Nevis", "code": "KN" },
+      { "name": "Saint Lucia", "code": "LC" },
+      { "name": "Saint Pierre and Miquelon", "code": "PM" },
+      { "name": "Saint Vincent and the Grenadines", "code": "VC" },
+      { "name": "Samoa", "code": "WS" },
+      { "name": "San Marino", "code": "SM" },
+      { "name": "Sao Tome and Principe", "code": "ST" },
+      { "name": "Saudi Arabia", "code": "SA" },
+      { "name": "Senegal", "code": "SN" },
+      { "name": "Serbia and Montenegro", "code": "CS" },
+      { "name": "Seychelles", "code": "SC" },
+      { "name": "Sierra Leone", "code": "SL" },
+      { "name": "Singapore", "code": "SG" },
+      { "name": "Slovakia", "code": "SK" },
+      { "name": "Slovenia", "code": "SI" },
+      { "name": "Solomon Islands", "code": "SB" },
+      { "name": "Somalia", "code": "SO" },
+      { "name": "South Africa", "code": "ZA" },
+      { "name": "South Georgia and the South Sandwich Islands", "code": "GS" },
+      { "name": "Spain", "code": "ES" },
+      { "name": "Sri Lanka", "code": "LK" },
+      { "name": "Sudan", "code": "SD" },
+      { "name": "Suriname", "code": "SR" },
+      { "name": "Svalbard and Jan Mayen", "code": "SJ" },
+      { "name": "Swaziland", "code": "SZ" },
+      { "name": "Sweden", "code": "SE" },
+      { "name": "Switzerland", "code": "CH" },
+      { "name": "Syrian Arab Republic", "code": "SY" },
+      { "name": "Taiwan, Province of China", "code": "TW" },
+      { "name": "Tajikistan", "code": "TJ" },
+      { "name": "Tanzania, United Republic of", "code": "TZ" },
+      { "name": "Thailand", "code": "TH" },
+      { "name": "Timor-Leste", "code": "TL" },
+      { "name": "Togo", "code": "TG" },
+      { "name": "Tokelau", "code": "TK" },
+      { "name": "Tonga", "code": "TO" },
+      { "name": "Trinidad and Tobago", "code": "TT" },
+      { "name": "Tunisia", "code": "TN" },
+      { "name": "Turkey", "code": "TR" },
+      { "name": "Turkmenistan", "code": "TM" },
+      { "name": "Turks and Caicos Islands", "code": "TC" },
+      { "name": "Tuvalu", "code": "TV" },
+      { "name": "Uganda", "code": "UG" },
+      { "name": "Ukraine", "code": "UA" },
+      { "name": "United Arab Emirates", "code": "AE" },
+      { "name": "United Kingdom", "code": "GB" },
+      { "name": "United States", "code": "US" },
+      { "name": "United States Minor Outlying Islands", "code": "UM" },
+      { "name": "Uruguay", "code": "UY" },
+      { "name": "Uzbekistan", "code": "UZ" },
+      { "name": "Vanuatu", "code": "VU" },
+      { "name": "Venezuela", "code": "VE" },
+      { "name": "Viet Nam", "code": "VN" },
+      { "name": "Virgin Islands, British", "code": "VG" },
+      { "name": "Virgin Islands, U.S.", "code": "VI" },
+      { "name": "Wallis and Futuna", "code": "WF" },
+      { "name": "Western Sahara", "code": "EH" },
+      { "name": "Yemen", "code": "YE" },
+      { "name": "Zambia", "code": "ZM" },
+      { "name": "Zimbabwe", "code": "ZW" }
+    ]
+    console.log("List of countries in the world", countries);
+
+    function mixArray(countries) {
+      for (var i = countries.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = countries[i];
+        countries[i] = countries[j];
+        countries[j] = temp;
+      }
+      return countries;
+    }
+    function replaceList(countries) {
+      document.getElementById("clear").innerHTML = "";
+      var listOfCountries = "<ol>";
+      for (i = 0; i < 50; i++) {
+        const stored = sessionStorage.setItem("country", JSON.stringify(countries[i]["name"]));
+        var country = sessionStorage.getItem("country");
+        listOfCountries += "<li>" + country.replace(/['"]+/g, '') + "</li>";
+      }
+      listOfCountries + "</ol>";
+      var listOfCountries = document.getElementById("clear").innerHTML = listOfCountries;
+      return listOfCountries;
+    }
+
+
+  </script>
 </body>
+
+</html>
