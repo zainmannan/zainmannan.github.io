@@ -1,266 +1,281 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway|Russo+One&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-    color: white;
+  margin: auto;
+  /* padding: 0; */
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  color: white;
 }
 
-body, html {
-    background-color: #78b3e0;
-    scroll-behavior: smooth;
+body,
+html {
+  background-color: #78b3e0;
+  scroll-behavior: smooth;
 }
 
 /* nav bar */
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15vh;
 }
 
 .logo h2 {
-    padding-left: 5px;
-    letter-spacing: 7px;
-    border: 2px solid white;
-    /* border-radius: 10px; */
+  padding-left: 5px;
+  letter-spacing: 7px;
+  border: 2px solid white;
+  /* border-radius: 10px; */
 }
 
 .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
 }
 
 .nav-links li {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 900;
-    display: block;
-    padding: 0px 25px;
-    transition: .3s;
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  display: block;
+  padding: 0px 25px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #FDD132;
+  color: #fdd132;
 }
 
 .burger {
-    display: none;
+  display: none;
 }
 
 .burger div {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 991px) {
-    body {
-      overflow-x: hidden;
-    }
-  
-    .nav-links {
-      position: fixed;
-      right: 0px;
-      height: 85vh;
-      top: 15vh;
-      background-color: #78b3e0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-      z-index: 1;
-    }
-  
-    .nav-links li {
-      opacity: 0;
-    }
-  
-    .burger {
-      display: block;
-      cursor: pointer;
-    }
+  body {
+    overflow-x: hidden;
   }
-  
-  .nav-active {
-    transform: translateX(0%);
+
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 85vh;
+    top: 15vh;
+    background-color: #78b3e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
   }
-  
-  @keyframes navLinkFade {
-    from {
-      opacity: 0; 
-      transform: translateX(50px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 5px);
-  }
-  
-  .toggle .line2 {
+
+  .nav-links li {
     opacity: 0;
   }
-  
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -5px);
-  }
-  
-  .middle {
-    position: absolute;
-    top: 4%;
-    left: 0%;
-    transform: translate(2px, -3px);
-  }
-  
-  .sm-container {
-    text-align: center;
-  }
-  
-  .sm-container i {
-    color: white;
-    padding: 20px;
-    font-size: 25px;
+
+  .burger {
+    display: block;
     cursor: pointer;
-    transition: 0.4s;
   }
-  
-  .sm-container i:hover {
-    transform: scale(1.2);
-  }
-  
-  .sm-menu {
-    background: #78b3e0;
-    position: absolute;
-    border-radius: 8px;
-    display: none;
-  }
-  
-  .sm-menu::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: #78b3e0;
-    position: absolute;
-    top: -5px;
-    left: 49%;
-    transform: translateX(-50%) rotate(45deg);
-  }  
-  
-  .line {
-      display: flexbox;
-      justify-content: space-around;
-      font-size: 120px;
-      text-transform: uppercase;
-      overflow: hidden;
-      border-right: .15em solid white;
-      white-space: nowrap;
-      margin: 17% auto;
-      letter-spacing: .05em;
-      animation: 
-        typing 3.5s steps(40,end),
-        blink-caret .75s step-end infinite;
 }
 
-  .anim-typewriter{
-    animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
-  }
-  @keyframes typewriter{
-    from{width: 0;}
-    to{width: 8em;}
-  }
-  @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
-  }
-  
-  @media screen and (max-width: 991px) {
-  
-    .s1 h1 {
-      font-size: 80px;
-      text-transform: uppercase;
-      letter-spacing: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      white-space: auto;
-    }
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
 
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
 
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.middle {
+  position: absolute;
+  top: 4%;
+  left: 20%;
+  transform: translate(2px, -3px);
+}
+
+.sm-container {
+  text-align: center;
+}
+
+.sm-container i {
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.sm-container i:hover {
+  transform: scale(1.2);
+}
+
+.sm-menu {
+  background: #78b3e0;
+  position: absolute;
+  border-radius: 8px;
+  display: none;
+}
+
+.sm-menu::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #78b3e0;
+  position: absolute;
+  top: -5px;
+  left: 49%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.line {
+  display: flexbox;
+  justify-content: space-around;
+  font-size: 120px;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 17% auto;
+  letter-spacing: 0.05em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.anim-typewriter {
+  animation: typewriter 2.5s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .s1 h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: auto;
+  }
+}
 
 .s1 {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .s2 {
-    width: 100%;
-    height: 100vh;
-    background-color: #78b3e0;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  background-color: #78b3e0;
 }
 
 .s2 h1 {
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .s2 p {
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .s3 {
-    width: 100%;
-    height: 100vh;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
 }
 
 .s3 h1 {
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s3 p {
+  font-size: 29px;
+  text-decoration: underline;
+}
+
+#listy ol li {
+  font-size: 29px;
+}
+#listy ol ul li {
+  font-size: 87.5%;
+}
+#listy ol ul ul li {
+  font-size: 75%;
+  text-decoration: none;
+  font-style: italic;
 }
 
 .s4 {
-    width: 100%;
-    height: 100vh;
-    background-color: #78b3e0;
+  width: 80%;
+  height: 100vh;
+  background-color: #78b3e0;
 }
 
 .s4 h1 {
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
-
-
-
-
