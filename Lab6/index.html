@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test AJAX page</title>
+    <link rel="stylesheet" type="text/css" href="./lab_styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Test AJAX page</div>
+        <button class="button" onclick="loadData()">Load Some JSON</button>
+        <div class="content" id="test"></div>
+        <div class="footer"></div>
+      </div>
+    </div>
+    <script>
+      function loadData() {
+        fetch("ajax_sample.json")
+          .then(res => res.json())
+          .then(res => res.map(c => c.name))
+          .then(
+            name =>
+              (document.querySelector(".content").innerHTML = replaceList(
+                mixArray(name)
+              ))
+          );
+      }
+      function mixArray(name) {
+        for (var i = name.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = name[i];
+          name[i] = name[j];
+          name[j] = temp;
+        }
+        return name;
+      }
+      function replaceList(name) {
+        var listOfCountries = "<ol>";
+        for (i = 0; i < 15; i++) {
+          const stored = sessionStorage.setItem(
+            "country",
+            JSON.stringify(name[i])
+          );
+          var country = sessionStorage.getItem("country");
+          listOfCountries += "<li>" + country.replace(/['"]+/g, "") + "</li>";
+        }
+        var listOfCountries = listOfCountries + "</ol>";
+        return listOfCountries;
+      }
+    </script>
+  </body>
+</html>
