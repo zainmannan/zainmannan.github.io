@@ -18,29 +18,29 @@
       function loadData() {
         fetch("ajax_sample.json")
           .then(res => res.json())
-          .then(res => res.map(c => c.name))
+          .then(res => res.map(c => c.name + ", " + c.code))
           .then(
-            name =>
+            namecode =>
               (document.querySelector(".content").innerHTML = replaceList(
-                mixArray(name)
+                mixArray(namecode)
               ))
           );
       }
-      function mixArray(name) {
-        for (var i = name.length - 1; i > 0; i--) {
+      function mixArray(namecode) {
+        for (var i = namecode.length - 1; i > 0; i--) {
           var j = Math.floor(Math.random() * (i + 1));
-          var temp = name[i];
-          name[i] = name[j];
-          name[j] = temp;
+          var temp = namecode[i];
+          namecode[i] = namecode[j];
+          namecode[j] = temp;
         }
-        return name;
+        return namecode;
       }
-      function replaceList(name) {
+      function replaceList(namecode) {
         var listOfCountries = "<ol>";
         for (i = 0; i < 15; i++) {
           const stored = sessionStorage.setItem(
             "country",
-            JSON.stringify(name[i])
+            JSON.stringify(namecode[i])
           );
           var country = sessionStorage.getItem("country");
           listOfCountries += "<li>" + country.replace(/['"]+/g, "") + "</li>";
