@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Russo+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+  overflow: hidden !important;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #eeb15a /*#e63e00*/ !important;
+}
+
+@media screen and (max-width: 991px) {
+  #fp-nav ul li a span,
+  .fp-slidesNav ul li a span {
+    background: transparent !important;
+  }
+}
+
+.s1 {
+  background-color: #fff;
+}
+
+.s2 {
+  background-color: #fff;
+}
+
+.s3 {
+  background-color: #fff;
+}
+
+.s4 {
+  background-color: #fff;
+}
+
+.middle {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(2px, -3px);
+  z-index: 2;
+}
+
+.sm-container {
+  text-align: center;
+  z-index: 2;
+}
+
+.sm-container i {
+  color: #eeb15a /*#e63e00*/;
+  padding: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.sm-container i:hover {
+  transform: scale(1.2);
+}
+
+.sm-menu {
+  background: #fbf7f5;
+  position: absolute;
+  border-radius: 8px;
+  display: none;
+}
+
+.sm-menu::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fbf7f5;
+  position: absolute;
+  top: -5px;
+  left: 49%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.s1 h1 {
+  font-size: 150px;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  background: url(library.jpg) 50% 120%;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.s3 h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 500%;
+  display: flex;
+  justify-content: center;
+  line-height: 2;
+}
+
+.s3 p {
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+  line-height: 1.5;
+}
+
+.s4 h2 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 500%;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 991px) {
+  .s1 h1 {
+    font-size: 80px;
+    font-family: "Russo One", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    background: url(library.jpg) 50% 120%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+/* cards */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media (width: 40rem) {
+    width: 50%;
+  }
+  @media (width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.card:hover .card__image{
+    filter: grayscale(100%);
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.5 rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  /* filter: contrast(70%); */
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+}
+
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media(width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+
+.kyoto {
+  background-image: url(kyoto.jpg);
+}
+
+.japan {
+  background-image: url(japan.jpeg);
+}
+
+.osi {
+  background-image: url(osi.jpg);
+}
+
+.zain {
+  background-image: url(zain.jpg);
+}
