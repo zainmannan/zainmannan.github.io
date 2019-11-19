@@ -269,8 +269,8 @@ img {
 }
 
 /* LEAFLET */
-#mapid { 
-  height: 750px; 
-  width: 70%;
+#map { 
+  width: 750px;
+  height: 70%;
   margin: auto;
 }
