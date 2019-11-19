@@ -188,7 +188,6 @@ img {
   overflow: hidden;
 }
 
-
 .card:hover .card__image {
     filter: grayscale(100%);
 }
@@ -220,7 +219,6 @@ img {
   background-size: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  /* filter: contrast(70%); */
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
@@ -266,7 +264,13 @@ img {
   background-image: url(shayon.jpg);
 }
 
+.jose {
+  background-image: url(jose1.jpg);
+}
+
 /* LEAFLET */
 #mapid { 
-  height: 180px; 
+  height: 750px; 
+  width: 70%;
+  margin: auto;
 }
