@@ -146,7 +146,7 @@ html {
   }
 }
 
-/* cards */
+/* CARDS */
 *,
 *::before,
 *::after {
@@ -189,7 +189,7 @@ img {
 }
 
 
-.card:hover .card__image{
+.card:hover .card__image {
     filter: grayscale(100%);
 }
 
@@ -252,4 +252,21 @@ img {
 
 .zain {
   background-image: url(zain.jpg);
+}
+
+.amber {
+  background-image: url(amber.jpg);
+}
+
+.mike {
+  background-image: url(mike.jpg);
+}
+
+.shayon {
+  background-image: url(shayon.jpg);
+}
+
+/* LEAFLET */
+#mapid { 
+  height: 180px; 
 }
