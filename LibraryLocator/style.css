@@ -245,36 +245,48 @@ img {
   }
 }
 
-.kyoto {
-  background-image: url(kyoto.jpg);
-}
-
-.japan {
-  background-image: url(japan.jpeg);
-}
-
 .osi {
   background-image: url(osi.jpg);
+}
+
+#o {
+  cursor: pointer;
 }
 
 .zain {
   background-image: url(zain.jpg);
 }
 
+#z {
+  cursor: pointer;
+}
+
 .amber {
   background-image: url(amber.jpg);
+}
+
+#a {
+  cursor: pointer;
 }
 
 .mike {
   background-image: url(mike.jpg);
 }
 
-.shayon {
-  background-image: url(shayon.jpg);
+#m {
+  cursor: pointer;
 }
+
+/* .shayon {
+  background-image: url(shayon.jpg);
+} */
 
 .jose {
   background-image: url(jose1.jpg);
+}
+
+#j {
+  cursor: pointer;
 }
 
 /* LEAFLET */

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
 </head>
 
 <body>
@@ -23,8 +27,8 @@
                 <div class="sm-container">
                     <i class="show-btn fas fa-book"></i>
                     <div class="sm-menu">
-                        <a href="https://github.com/zainmannan/zainmannan.github.io/tree/master/LibraryLocator" target="_blank"><i
-                class="fab fa-github"></i></a>
+                        <a href="https://github.com/zainmannan/zainmannan.github.io/tree/master/LibraryLocator"
+                            target="_blank"><i class="fab fa-github"></i></a>
                         <a href="mailto:zmannan1@terpmail.umd.edu"><i class="far fa-envelope" target="_blank"></i></a>
                     </div>
                 </div>
@@ -40,7 +44,7 @@
             <script>
                 // Geting current latitude and longitude using JavaScript's navigator.geolocation.getCurrentPosition() function
                 // This function returns an object called position that contains within it the user's latitude and longitude
-                navigator.geolocation.getCurrentPosition(function(position) {
+                navigator.geolocation.getCurrentPosition(function (position) {
 
                     // storing latitude and longitude from the position object into variables
                     let current_lat = position.coords.latitude;
@@ -108,8 +112,11 @@
             <h2>Our Purpose</h2>
             <center>
                 <p>
-                    This website was created to help residents of Prince George's County, which includes parents, teens, college students, and others, find a library near them. Our goal is to solve the problem that these people face, which is a lack of computer access or
-                    reliable internet access at home. We created an interactive map that pinpoints different libraries in the county based on the location of the user and the location of possible destinations.
+                    This website was created to help residents of Prince George's County, which includes parents, teens,
+                    college students, and others, find a library near them. Our goal is to solve the problem that these
+                    people face, which is a lack of computer access or
+                    reliable internet access at home. We created an interactive map that pinpoints different libraries
+                    in the county based on the location of the user and the location of possible destinations.
                     <br /><br />
                 </p>
                 <p><a href="#" target="_blank">Let us hear your feedback!</a></p>
@@ -120,7 +127,7 @@
             <h2>Our Team</h2>
             <ul class="cards">
                 <li class="cards__item">
-                    <div class="card">
+                    <div class="card" id="z">
                         <div class="card__image zain"></div>
                         <div class="card__content">
                             <center>
@@ -134,7 +141,7 @@
                     </div>
                 </li>
                 <li class="cards__item">
-                    <div class="card">
+                    <div class="card" id="a">
                         <div class="card__image amber"></div>
                         <div class="card__content">
                             <center>
@@ -148,7 +155,7 @@
                     </div>
                 </li>
                 <li class="cards__item">
-                    <div class="card">
+                    <div class="card" id="o">
                         <div class="card__image osi"></div>
                         <div class="card__content">
                             <center>
@@ -165,7 +172,7 @@
             <br />
             <ul class="cards">
                 <li class="cards__item">
-                    <div class="card">
+                    <div class="card" id="m">
                         <div class="card__image mike"></div>
                         <div class="card__content">
                             <center>
@@ -179,7 +186,7 @@
                     </div>
                 </li>
                 <li class="cards__item">
-                    <div class="card">
+                    <div class="card" id="j">
                         <div class="card__image jose"></div>
                         <div class="card__content">
                             <center>
@@ -227,7 +234,7 @@
             navigationTooltips: ["HOME", "VIZ", "ABOUT", "TEAM"],
             fixedElements: ".middle"
         });
-        $(".show-btn").click(function() {
+        $(".show-btn").click(function () {
             $(".sm-menu").fadeToggle("fast");
         });
         var para = document.querySelectorAll(".ellipsis");
@@ -245,6 +252,36 @@
             } else {
                 console.log("I've got nothing");
             }
+        }
+
+        document.getElementById("z").onclick = function() {zainGit()};
+
+        function zainGit() {
+            window.open("https://github.com/zainmannan");
+        }
+
+        document.getElementById("o").onclick = function() {osiGit()};
+
+        function osiGit() {
+            window.open("https://github.com/osisunday97");
+        }
+
+        document.getElementById("a").onclick = function() {amberGit()};
+
+        function amberGit() {
+            window.open("https://github.com/andietrich97");
+        }
+
+        document.getElementById("j").onclick = function() {joseGit()};
+
+        function joseGit() {
+            window.open("https://github.com/jwmartinez1");
+        }
+
+        document.getElementById("m").onclick = function() {mikeGit()};
+
+        function mikeGit() {
+            window.open("https://github.com");
         }
     </script>
 </body>
