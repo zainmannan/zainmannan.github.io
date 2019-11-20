@@ -43,11 +43,11 @@
                 navigator.geolocation.getCurrentPosition(function(position) {
 
                     // storing latitude and longitude from the position object into variables
-                    // let current_lat = position.coords.latitude;
-                    // let current_long = position.coords.longitude;
+                    let current_lat = position.coords.latitude;
+                    let current_long = position.coords.longitude;
 
-                    let current_lat = 38.7849
-                    let current_long = -76.8721
+                    //let current_lat = 38.7849
+                    //let current_long = -76.8721
 
                     // Setting the map location to user's latitude and longitude calculated in previous step
                     var map = L.map('map').setView([current_lat, current_long], 11);
