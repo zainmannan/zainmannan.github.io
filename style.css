@@ -322,7 +322,7 @@ nav {
   right: 5px;
 }
 .skills-bar-container li .bar-container {
-  background: #555;
+  background: white;
   position: relative;
   width: 100%;
   height: 5px;
@@ -354,49 +354,56 @@ nav {
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
+
+.skills-bar-container li .bar-container #progress-css {
+  -webkit-animation-name: progress-html;
+  animation-name: progress-html;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
 .skills-bar-container li .bar-container #progress-python {
   -webkit-animation-name: progress-python;
   animation-name: progress-python;
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
 }
 .skills-bar-container li .bar-container #progress-javascript {
   -webkit-animation-name: progress-javascript;
   animation-name: progress-javascript;
-  -webkit-animation-delay: 2.1s;
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 .skills-bar-container li .bar-container #progress-java {
   -webkit-animation-name: progress-java;
   animation-name: progress-java;
-  -webkit-animation-delay: 2.8s;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
 }
 .skills-bar-container li .bar-container #progress-tableau {
   -webkit-animation-name: progress-tableau;
   animation-name: progress-tableau;
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s;
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s;
 }
 
 .progressred {
-  background-color: #c0392b;
+  background-color: #2D253A;
 }
 
 .progressblue {
-  background-color: #1199ff;
+  background-color: #2D253A;
 }
 
 .progresspurple {
-  background-color: #9b59b6;
+  background-color: #2D253A;
 }
 
 .progressorange {
-  background-color: #ffa500;
+  background-color: #2D253A;
 }
 
 .progressgreen {
-  background-color: #27ae60;
+  background-color: #2D253A;
 }
 
 @-webkit-keyframes progress-html {
@@ -420,7 +427,7 @@ nav {
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 40%;
   }
 }
 @-webkit-keyframes progress-java {
@@ -460,7 +467,7 @@ nav {
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 40%;
   }
 }
 @-moz-keyframes progress-java {
@@ -500,7 +507,7 @@ nav {
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 40%;
   }
 }
 @keyframes progress-java {
@@ -612,9 +619,19 @@ img {
 .s5 {
   height: 10vh;
   background-color: white/*#2D253A*/;
+  margin-top: 50px;
+}
+
+.s5 hr {
+  border-top: 1px solid #2D253A;
+  width: 50%;
+}
+
+.icons {
   display: flex;
   justify-content: center;
   align-content: space-between;
+  width: 50%;
 }
 
 .s5 a {

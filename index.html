@@ -20,7 +20,7 @@
                     ZM
                 </h2>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links animated slideInDown">
                 <li><a href="#about">about</a></li>
                 <li><a href="#experience">experience</a></li>
                 <li><a href="#skills">skills</a></li>
@@ -71,11 +71,10 @@
             <h1>WORK HISTORY {</h1>
             <div class="work">
                 <h2>Project Management Intern @ Ciena</h2>
-                <p>I helped transition Ciena and it's employees from Salesforce Classic to Salesforce Lightning via the
-                    implementation of WalkMe.
-                    I assisted in the definition of project scope and objectives, involving all relevant stakeholders
-                    and
-                    ensured technical feasibility.
+                <p>During this internship, I helped to transition Ciena and it's employees from Salesforce Classic to 
+                    Salesforce Lightning via the implementation of guides through applications such as WalkMe and other 
+                    instructional tools. My work was primarily focused on Professional Services Automation (PSA) and 
+                    assisting project managers during this shift.
                 </p>
                 <br>
                 <h2>Business Development Intern @ Vheda Health</h2>
@@ -97,17 +96,23 @@
             <div class="work">
                 <h2>Data Analytics Course @ General Assembly</h2>
                 <p>
-                    This course taught me how to use large amounts of data to make business decisions. Using Excel and SQL, 
-                    I learned how to collect, clean, and analyze data from multiple sources including the internet, local files, 
-                    and relational databases. Additionally, I was able to use analysis to make business decisions by practicing 
+                    This course taught me how to use large amounts of data to make business decisions. Using Excel and
+                    SQL,
+                    I learned how to collect, clean, and analyze data from multiple sources including the internet,
+                    local files,
+                    and relational databases. Additionally, I was able to use analysis to make business decisions by
+                    practicing
                     with real world data sets to contextualize how analytics fit into the business world.
                 </p>
                 <br>
                 <h2>WalkMe Certification</h2>
                 <p>
-                    WalkMe is used to create comprehensive step-by-step guidance is delivered through a sequence of tip balloons 
-                    without requiring the user to leave the screen, watch video tutorials, or read tedious manuals or FAQ pages. 
-                    Certification in this has allowed me to become efficient in its implementation on any website, including 
+                    WalkMe is used to create comprehensive step-by-step guidance is delivered through a sequence of tip
+                    balloons
+                    without requiring the user to leave the screen, watch video tutorials, or read tedious manuals or
+                    FAQ pages.
+                    Certification in this has allowed me to become efficient in its implementation on any website,
+                    including
                     Salesforce.
                 </p>
             </div>
@@ -120,11 +125,20 @@
         <ul class="skills-bar-container">
             <li>
                 <div class="progressbar-title">
-                    <h3>HTML5 & CSS</h3>
+                    <h3>HTML5</h3>
                     <span class="percent" id="html-pourcent"></span>
                 </div>
                 <div class="bar-container">
                     <span class="progressbar progressred" id="progress-html"></span>
+                </div>
+            </li>
+            <li>
+                <div class="progressbar-title">
+                    <h3>CSS</h3>
+                    <span class="percent" id="html-pourcent"></span>
+                </div>
+                <div class="bar-container">
+                    <span class="progressbar progressred" id="progress-css"></span>
                 </div>
             </li>
             <li>
@@ -167,8 +181,6 @@
                 </div>
             </li>
         </ul>
-        <br>
-        <br>
         <br>
         <h1>PROJECTS</h1>
         <ul class="cards">
@@ -228,29 +240,48 @@
                     </div>
                 </div>
             </li>
+            <li class="cards__item">
+                    <div class="card" id="a">
+                        <div class="card__image"></div>
+                        <div class="card__content">
+                            <center>
+                                <div class="card__title">Library Locator</div>
+                                <p class="card__text">
+                                    I created a server to host a website I built to solve an information problem.<br>Data was fetched from an 
+                                    API and JavaScript was used to display it.
+                                </p>
+                            </center>
+                        </div>
+                    </div>
+                </li>
         </ul>
     </div>
     <div class="s5">
+        <hr>
+        <br>
+        <div class="icons">
         <a href="https://www.linkedin.com/in/zain-mannan-86a07572/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/zainmannan" target="_blank"><i class="fab fa-github"></i></a>
         <a href="mailto:zmannan1@terpmail.umd.edu"><i class="far fa-envelope" target="_blank"></i></a>
         <a href="https://twitter.com/make_it_Zain" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
     </div>
 
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
+
     <script>
         $(".show-btn").click(function () {
             $(".sm-menu").fadeToggle("fast");
         });
         var lang = {
-            "html": "90%",
-            "python": "60%",
-            "javascript": "70%",
-            "java": "55%",
-            "tableau": "80%"
+            "html": "",
+            "python": "",
+            "javascript": "",
+            "java": "",
+            "tableau": ""
         };
 
         var multiply = 4;
