@@ -38,6 +38,52 @@
             <h2>Libraries Near You</h2>
             <div id="map"></div>
             <script>
+                //This function markerOnClick() is fired when the user clicks any of the library markers
+                function markerOnClick(event) {
+
+                    // Get the content text of the marker and store it in a variable
+                    var marker_popup_content = event.sourceTarget._popup._content
+
+                    // The content text will be an HTML text. The branch name is stored in a <u> tag.
+                    //  JavaScript thinks marker_popup_content is simply a text, so we want to give JavaScript
+                    // a way to convert marker_popup_content to a format that JavaScript can parse as HTML. 
+
+                    // Initializing Parser object
+                    var parser = new DOMParser();
+
+                    // Telling JavaScript to parse marker_popup_content as html
+                    var htmlDoc = parser.parseFromString(marker_popup_content, 'text/html');
+
+                    // getElementsByTagName(tag_name) will return a list of elements with tag = tag_name
+                    // We want to look at only the first element and get it's innerText, which will be the
+                    // branch name
+                    var branch_name = htmlDoc.getElementsByTagName('u')[0].innerText
+
+                    // open services.json to and check which library system the clicked marker belongs to
+
+                    $.getJSON("services.json", function(library_services_json) {
+
+                        library_services_json.services.forEach(library_system => {
+
+                            if (library_system.branches.includes(branch_name) == true) {
+
+                                var services_element = document.getElementById('services')
+
+                                library_system.services.forEach(service_category => {
+                                    var service_category_list = document.createElement('ul')
+                                    service_category_list.innerText = service_category.category;
+                                    services_element.appendChild(service_category_list)
+                                })
+
+
+                            }
+                        })
+
+                    });
+
+                }
+
+
                 // Geting current latitude and longitude using JavaScript's navigator.geolocation.getCurrentPosition() function
                 // This function returns an object called position that contains within it the user's latitude and longitude
                 navigator.geolocation.getCurrentPosition(function(position) {
@@ -57,10 +103,13 @@
                     }).addTo(map);
 
                     // Adding marker on your current location
-                    let marker = L.marker([current_lat, current_long]).addTo(map);
-                    marker.bindTooltip("You are here", {
+                    let current_location_marker = L.marker([current_lat, current_long])
+                    current_location_marker.addTo(map);
+                    current_location_marker.bindTooltip("You are here", {
                         permanent: true
                     }).openTooltip();
+
+
 
                     // Adding circle around current location, 10000 meters (6 miles) radius
                     // Uncomment this code if you don't want circle
@@ -100,13 +149,55 @@
 
 
                                 // Adding marker at lat and long of each library object to map
-                                let marker = L.marker([library_lat, library_long]).addTo(map);
+                                let marker = L.marker([library_lat, library_long]).on('click', markerOnClick)
+
+                                marker.addTo(map)
 
                                 // putting together branch name, address and phone number as html
-                                let label_html = "<br><u>" + branch_name + "</u><br>" + full_address + "<br>Phone: " + telephone + "</p>"
+                                let label_html = "<br><u>" + branch_name + "</u><br>" + full_address + "<br>Phone: " + telephone + "<br>"
 
-                                // adding label to each marker as popup. Marker has to be clicked to reveal label
-                                marker.bindPopup(label_html)
+                                // Opening services_dictionary.json to check the list of services for library branch
+                                $.getJSON("services_dictionary.json", function(library_services_json) {
+
+                                        // Initializing HTML text for services as null
+                                        // This HTML is going to be appeneded to the label_html created in Line 162
+                                        services_html = ""
+
+                                        // For each item in list found in services_dictionary.json
+                                        library_services_json.forEach(each_branch_services => {
+
+                                            // If the branch name of the list item equal to the branch name of the current map marker
+                                            if (each_branch_services.branch_name == branch_name) {
+
+                                                // Create HTML text
+                                                // The text looks something like this
+                                                /*
+                                                    Services:
+                                                      . some_service_1
+                                                      . some_service_2
+                                                      . some_service_3
+                                                */
+                                                services_html += "Services:"
+                                                services_html += "<ul>"
+                                                each_branch_services.services.forEach(service => {
+                                                    services_html += "<li>" + "<a href=" + "\"" + service.url + "\">" + service.name + "</a>" + "</li>"
+                                                })
+                                                services_html += "</ul>"
+                                            }
+                                        })
+
+                                        // If the branch name of the current map marker was not found in services_dictionary.json
+                                        // Set the HTML text as Services: Coming Soon
+                                        if (services_html == "") {
+                                            services_html = "Services: Coming Soon!"
+                                        }
+
+                                        // Add the full HTML text with branch name, address, phone number and list of services
+                                        // to the Popup that appears when you click the marker
+                                        marker.bindPopup(label_html + services_html)
+                                    })
+                                    // adding label to each marker as popup. Marker has to be clicked to reveal label
+
 
                                 // If you want the label to be permenantly visible on the map, add this code instead of the previous one 
                                 // marker.bindTooltip(library.branch_name, {permanent: true}).openTooltip();
@@ -236,6 +327,7 @@
             autoScrolling: true,
             keyboardScrolling: true,
             navigation: true,
+            fitToSection: false,
             navigationPosition: "left",
             navigationTooltips: ["HOME", "VIZ", "ABOUT", "TEAM"],
             fixedElements: ".middle"
