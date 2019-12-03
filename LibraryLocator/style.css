@@ -17,6 +17,11 @@ html {
     !important;
 }
 
+#fp-nav ul li .fp-tooltip.fp-left {
+    color: black;
+    left: 20px;
+}
+
 @media screen and (max-width: 991px) {
     #fp-nav ul li a span,
     .fp-slidesNav ul li a span {
@@ -110,6 +115,15 @@ html {
     line-height: 2;
 }
 
+.s2 p {
+    font-size: 120%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    line-height: 1.5;
+}
+
 .s3 h2 {
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -144,15 +158,15 @@ html {
         text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 20px;
-        position: absolute;
+        /* position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
+        transform: translate(-50%, -50%); */
+        /* margin: 0;
         background: url(library.jpg) 50% 120%;
         background-size: cover;
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        -webkit-background-clip: text; */
     }
 }
 
@@ -298,7 +312,7 @@ img {
 /* LEAFLET */
 
 #map {
-    width: 70%;
-    height: 650px;
+    width: 50%;
+    height: 550px;
     margin: auto;
 }
