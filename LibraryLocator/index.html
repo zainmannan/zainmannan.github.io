@@ -453,14 +453,18 @@
         });
       });
       app.get("/", function(req, res) {
-        res.send("is something coming up?");
+        res.send("The data was supported by the official website of Prince George's County");
       });
       app.post("/", function(req, res) {
-        res.send("i hope something is coming up");
+        res.send("This library locator website should help you in locating services that library supply near you");
       });
-      app.put("/", function(req, res) {
-        res.send("no seriously something better be coming up");
+      // app.put("/", function(req, res) {
+      //   res.send("If this works correctly, our goal is to be able to direct the user to a place that they can benefit from.");
+      // });
+      app.patch("/", function(req, res) {
+        res.send("If this works correctly, our goal is to be able to direct the user to a place that they can benefit from.");
       });
+
     </script>
   </body>
 </html>
